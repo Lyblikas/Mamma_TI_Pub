@@ -1,2 +1,516 @@
-git remote add origin https://github.com/your-username/your-repo.git
-git push -u origin main
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Kursus Algajatele - Esimene tund</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <style>
+        /* Custom styles - you can modify these colors */
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #8b5cf6;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .navbar {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 0;
+            margin-bottom: 40px;
+        }
+        
+        .lesson-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        
+        .lesson-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+        
+        .tip-box {
+            background-color: #e0f2fe;
+            border-left: 4px solid #0284c7;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background-color: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .practice-section {
+            background-color: #f8fafc;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+        
+        .progress-indicator {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        
+        .section-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background-color: #1e293b;
+            color: white;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-robot"></i> AI Kursus
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Avaleht</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tunnid">Tunnid</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kontakt">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-3">Tere tulemast AI kursusele! 👋</h1>
+                    <p class="lead mb-4">Õpi tehisintellekti kasutama oma tööelus – lihtsalt ja praktiliselt. Pole vaja tehnilisi teadmisi!</p>
+                    <a href="#lesson-content" class="btn btn-light btn-lg">Alusta õppimist</a>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <i class="bi bi-mortarboard" style="font-size: 8rem; opacity: 0.3;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container" id="lesson-content">
+        
+        <!-- Lesson Overview -->
+        <div class="row mb-5">
+            <div class="col-lg-12">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="badge bg-primary me-2">Tund 1</span>
+                            <span class="text-muted">⏱️ 15 minutit</span>
+                        </div>
+                        <h2 class="mb-3">Mis on tehisintellekt ja kuidas see sind aitab?</h2>
+                        <p class="lead text-muted">Sul pole vaja olla tehnikaguru, et tehisintellekti mõista ja kasutada. See on nagu õppida kasutama nutitelefoni – alguses tundub keeruline, aga varsti saab see igapäevaseks abivahendiks.</p>
+                        <p class="lead text-muted">See on jõukohane meile kõigile - Memmedele peale TI kursust!.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- What is AI Section -->
+        <div class="row mb-5">
+            <div class="col-lg-12">
+                <h3 class="mb-4"><i class="bi bi-lightbulb section-icon d-block"></i>Mis on tehisintellekt lihtsalt öeldes?</h3>
+                <p class="fs-5">Tehisintellekt (AI) on arvutiprogramm, mis oskab õppida ja mõelda sarnaselt inimesele.</p>
+                
+                <div class="row mt-4">
+                    <div class="col-md-6 mb-3">
+                        <div class="card h-100 border-primary">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="bi bi-file-earmark-spreadsheet text-primary"></i> Excel</h5>
+                                <p class="card-text">Teeb arvutusi, mida sa käsid</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="card h-100 border-success">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="bi bi-stars text-success"></i> AI</h5>
+                                <p class="card-text">Oskab ise mõelda, õppida ja pakkuda lahendusi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tip-box mt-4">
+                    <h6><i class="bi bi-cup-hot"></i> Näide igapäevaelust:</h6>
+                    <p class="mb-0">Kui sa küsid Google'ist "parim kohvik lähedal", siis AI aitab leida vastuse, arvestades sinu asukohta, kellaaega ja teiste inimeste hinnanguid.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Where You Already Use AI -->
+        <div class="row mb-5">
+            <div class="col-lg-12">
+                <h3 class="mb-4"><i class="bi bi-check-circle section-icon d-block"></i>Kus sa juba AI'd kasutad (ilma et teaksid)?</h3>
+                
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="card lesson-card">
+                            <div class="card-body text-center">
+                                <i class="bi bi-envelope-at" style="font-size: 3rem; color: #6366f1;"></i>
+                                <h5 class="mt-3">E-posti kirjutamine</h5>
+                                <p class="text-muted">Gmail soovitab sulle lausete lõppe</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card lesson-card">
+                            <div class="card-body text-center">
+                                <i class="bi bi-camera" style="font-size: 3rem; color: #8b5cf6;"></i>
+                                <h5 class="mt-3">Fotode tegemine</h5>
+                                <p class="text-muted">Telefon teeb pildi ilusaks automaatselt</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card lesson-card">
+                            <div class="card-body text-center">
+                                <i class="bi bi-film" style="font-size: 3rem; color: #ec4899;"></i>
+                                <h5 class="mt-3">Netflix ja Spotify</h5>
+                                <p class="text-muted">Soovitab sulle filme ja muusikat</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-success mt-4" role="alert">
+                    <h5 class="alert-heading"><i class="bi bi-emoji-smile"></i> Oluline:</h5>
+                    Sa juba kasutad AI'd iga päev! Nüüd õpime, kuidas seda veel paremini ära kasutada.
+                </div>
+            </div>
+        </div>
+
+        <!-- How AI Helps at Work -->
+        <div class="row mb-5">
+            <div class="col-lg-12">
+                <h3 class="mb-4"><i class="bi bi-briefcase section-icon d-block"></i>Kuidas AI saab sind tööl aidata?</h3>
+                
+                <div class="accordion" id="workAccordion">
+                    <!-- Item 1 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                                <i class="bi bi-pencil-square me-2"></i> 1. Kirjade ja tekstide kirjutamine
+                            </button>
+                        </h2>
+                        <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#workAccordion">
+                            <div class="accordion-body">
+                                <p><strong>Probleem:</strong> Sul kulub palju aega e-mailide või aruannete kirjutamisele?</p>
+                                <p><strong>Lahendus:</strong> AI-tööriistad (nagu ChatGPT või Claude) aitavad:</p>
+                                <ul>
+                                    <li>Kirjutada ametlikke kirju</li>
+                                    <li>Koostada kokkuvõtteid</li>
+                                    <li>Parandada õigekirja ja stiili</li>
+                                </ul>
+                                <div class="bg-light p-3 rounded">
+                                    <p class="mb-1"><strong>Näide:</strong></p>
+                                    <p class="mb-1"><em>Sina:</em> "Pean kirjutama kliendile vabanduskirja, kuna tellimus hilines"</p>
+                                    <p class="mb-0"><em>AI:</em> Pakub valmis kirja teksti, mida saad kohandada</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                                <i class="bi bi-table me-2"></i> 2. Exceli ja andmete töötlemine
+                            </button>
+                        </h2>
+                        <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#workAccordion">
+                            <div class="accordion-body">
+                                <p><strong>Probleem:</strong> Excel-valemid on segased ja aeganõudvad?</p>
+                                <p><strong>Lahendus:</strong> AI oskab:</p>
+                                <ul>
+                                    <li>Selgitada Exceli valemeid</li>
+                                    <li>Luua sulle vajalikke valemeid</li>
+                                    <li>Analüüsida andmeid ja teha kokkuvõtteid</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                                <i class="bi bi-lightbulb me-2"></i> 3. Ideede genereerimine
+                            </button>
+                        </h2>
+                        <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#workAccordion">
+                            <div class="accordion-body">
+                                <p><strong>Probleem:</strong> Sul on vaja uusi ideid, aga aju on tühi?</p>
+                                <p><strong>Lahendus:</strong> AI aitab:</p>
+                                <ul>
+                                    <li>Mõelda välja sündmuse ideid</li>
+                                    <li>Luua turunduskampaania ettepanekuid</li>
+                                    <li>Leida lahendusi probleemidele</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Practice Section -->
+        <div class="practice-section">
+            <h3 class="mb-4"><i class="bi bi-hand-index-thumb text-primary"></i> Praktiline harjutus (5 minutit)</h3>
+            <h4>Proovi kohe: Küsi AI-lt abi</h4>
+            
+            <ol class="fs-5">
+                <li class="mb-3">Mine lehele <strong>chat.openai.com</strong> või <strong>claude.ai</strong></li>
+                <li class="mb-3">Kirjuta üks nendest küsimustest:
+                    <ul class="mt-2">
+                        <li>"Kuidas ma saan paremini aega planeerida?"</li>
+                        <li>"Kirjuta mulle meeldetuletus koosolekule homme kell 10"</li>
+                        <li>"Selgita mulle, mis on pilv-arvutamine lihtsate sõnadega"</li>
+                    </ul>
+                </li>
+                <li>Vaata, milline vastus tuleb!</li>
+            </ol>
+
+            <div class="alert alert-info">
+                <i class="bi bi-info-circle"></i> <strong>Vihje:</strong> Mida täpsemalt sa küsimuse sõnastad, seda parem on vastus!
+            </div>
+        </div>
+
+        <!-- Important Tips -->
+        <div class="row mb-5">
+            <div class="col-lg-6">
+                <div class="card border-success h-100">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="mb-0"><i class="bi bi-check-lg"></i> Mida teha:</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li class="mb-2"><strong>Alusta väikestest sammudest</strong> – vali üks tööriist ja õpi seda kasutama</li>
+                            <li class="mb-2"><strong>Küsi julgelt</strong> – AI ei mõista valesti ega hakka sind kohtuma</li>
+                            <li class="mb-2"><strong>Eksperimenteeri</strong> – kui vastus ei sobi, küsi teistmoodi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card border-warning h-100">
+                    <div class="card-header bg-warning">
+                        <h5 class="mb-0"><i class="bi bi-x-lg"></i> Mida mitte karta:</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li class="mb-2"><strong>AI ei asenda sind</strong> – see on tööriist, nagu arvuti või telefon</li>
+                            <li class="mb-2"><strong>Sa ei pea olema tehnikaguru</strong> – kui oskad Google'it kasutada, oskad ka AI'd</li>
+                            <li class="mb-2"><strong>Ei ole "rumalaid küsimusi"</strong> – AI on kannatlik õpetaja</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="row mb-5">
+            <div class="col-lg-12">
+                <div class="card bg-primary text-white">
+                    <div class="card-body p-4">
+                        <h3 class="mb-4"><i class="bi bi-bookmark-check"></i> Kokkuvõte: Mida sa täna õppisid?</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p class="fs-5">🎯 <strong>AI on tööriist</strong>, mis aitab sul tööd paremini ja kiiremini teha</p>
+                                <p class="fs-5">🎯 <strong>Sa juba kasutad AI'd</strong> igapäevaselt</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="fs-5">🎯 <strong>AI oskab aidata</strong> kirjutamisel, Exceli valemitega, ideede leidmisel</p>
+                                <p class="fs-5">🎯 <strong>Pole vaja karta</strong> – alusta väikeste sammudega</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Homework -->
+        <div class="row mb-5">
+            <div class="col-lg-12">
+                <div class="card border-info">
+                    <div class="card-header bg-info text-white">
+                        <h4 class="mb-0"><i class="bi bi-house-door"></i> Järgmine samm</h4>
+                    </div>
+                    <div class="card-body">
+                        <p class="fs-5"><strong>Kodutöö:</strong> Vali üks igapäevane töökohustus ja mõtle, kuidas AI võiks sind selle juures aidata. Järgmises tunnis õpime, kuidas seda praktikas teha!</p>
+                        <p class="fs-5 mb-0"><strong>Küsimused?</strong> Kirjuta need üles – järgmises tunnis räägime nendest!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="row mb-5">
+            <div class="col-lg-12">
+                <div class="d-flex justify-content-between">
+                    <a href="index.html" class="btn btn-outline-secondary btn-lg">
+                        <i class="bi bi-arrow-left"></i> Tagasi avalehele
+                    </a>
+                    <a href="lesson2.html" class="btn btn-primary btn-lg">
+                        Järgmine tund <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Course Lessons Preview -->
+        <div id="tunnid" class="row mb-5">
+            <div class="col-lg-12">
+                <h3 class="mb-4 text-center">Kõik kursuse tunnid</h3>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="card lesson-card border-primary">
+                            <div class="card-body">
+                                <span class="badge bg-success mb-2">✓ Lõpetatud</span>
+                                <h5 class="card-title">Tund 1: Mis on AI?</h5>
+                                <p class="card-text">Tutvumine tehisintellektiga ja selle kasutusaladega</p>
+                                <a href="lesson1.html" class="btn btn-sm btn-primary">Vaata uuesti</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card lesson-card">
+                            <div class="card-body">
+                                <span class="badge bg-warning mb-2">Järgmine</span>
+                                <h5 class="card-title">Tund 2: AI-ga suhtlemine</h5>
+                                <p class="card-text">Kuidas kirjutada häid küsimusi ja saada paremaid vastuseid</p>
+                                <a href="lesson2.html" class="btn btn-sm btn-outline-primary">Alusta</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card lesson-card">
+                            <div class="card-body">
+                                <span class="badge bg-secondary mb-2">Lukus</span>
+                                <h5 class="card-title">Tund 3: AI töökohas</h5>
+                                <p class="card-text">Praktilised näited AI kasutamisest igapäevatöös</p>
+                                <button class="btn btn-sm btn-outline-secondary" disabled>Varsti</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Progress Indicator -->
+    <div class="progress-indicator">
+        <div class="text-center">
+            <div class="mb-2">
+                <strong>Sinu Progress</strong>
+            </div>
+            <div class="progress" style="width: 150px;">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 33%">33%</div>
+            </div>
+            <small class="text-muted mt-1 d-block">Tundi 1/3</small>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-4" id="kontakt">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="bi bi-robot"></i> AI Kursus Algajatele</h5>
+                    <p class="text-muted">Õpi tehisintellekti kasutama oma tööelus – lihtsalt ja praktiliselt.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5>Kontakt</h5>
+                    <p class="text-muted">
+                        <i class="bi bi-envelope"></i> info@aikursus.ee<br>
+                        <i class="bi bi-phone"></i> +372 1234 5678
+                    </p>
+                </div>
+            </div>
+            <hr class="my-3 bg-light">
+            <div class="text-center text-muted">
+                <small>&copy; 2024 AI Kursus. Kõik õigused kaitstud.</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Progress tracking
+        window.addEventListener('scroll', function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            
+            // You can add a progress bar at the top if you want
+            console.log('Page scroll: ' + scrolled + '%');
+        });
+    </script>
+</body>
+</html>
