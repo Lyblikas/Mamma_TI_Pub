@@ -10,6 +10,17 @@
     body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
     .hero { background: linear-gradient(135deg,#667eea 0%,#764ba2 100%); color:#fff; padding:48px 0; }
     footer { background:#1e293b; color:#fff; margin-top:40px; padding:20px 0; }
+    .progress-indicator {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+    .section-icon { font-size: 2rem; color: #6366f1; margin-bottom: 10px; }
   </style>
 </head>
 <body>
@@ -53,15 +64,262 @@
         <li><strong>Ole konkreetne:</strong> täpsusta oma eesmärki ja vormi (nt kirjuta e-kiri, koosta nimekiri, loo tabel).</li>
         <li><strong>Lisa kontekst ja tausta:</strong> kellele või mis olukorra jaoks on AI vastus mõeldud.</li>
         <li><strong>Kirjelda oma rolli, taset ja kogemust:</strong> anna infot AI-le enda/vastaja iseloomustamiseks (koostööpartneri esindaja, kogenud reisija, soojalembene, jne).</li>
-        <li><strong>Lisa konkreetseid detaile:</strong> aeg, koht, keel, vastuse pikkus jne.</li>
+        <li><strong>Lisa konkreetseid detaile:</strong> aeg, koht, keel jne.</li>
         <li><strong>Anna näited:</strong> kui tahad stiili, lisa 1–2 näidissõnumit.</li>
-        <li><strong>AI ei ole mõtteluger.</strong> Mida rohkem infot sa annad, seda paremini saab AI sind aidata!</li>
+        <li><strong>AI ei ole mõtteluger.</strong> Mida rohkem infot sa annad, seda parem on tulemus!</li>
       </ol>
 
       <div class="mt-4 p-3 bg-light rounded">
         <h5>Näide</h5>
         <p><strong>Palun koostada:</strong> lühike e‑mail kliendile, vabandusega tarnetingimuste viivituse eest. Toon: sõbralik professionaalne. Maksimaalne pikkus: 5 lauset.</p>
       </div>
+
+      <!-- Accordion block inserted below the "Maksimaalne pikkus" sentence -->
+      <div class="mt-4">
+        <h4 class="mb-3"><i class="bi bi-list-ul section-icon d-inline-block"></i> Kuidas küsida häid küsimusi AI-lt</h4>
+
+        <div class="accordion" id="promptAccordion">
+
+          <!-- 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading1">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                1. Ole konkreetne ja selge
+              </button>
+            </h2>
+            <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#promptAccordion">
+              <div class="accordion-body">
+                <p><strong>Halb näide:</strong> "Räägi mulle toidust"</p>
+                <p><strong>Hea näide:</strong> "Soovita mulle 3 kiiret õhtusöögi retsepti, mis valmivad alla 30 minuti ja sobivad diabeetikule"</p>
+                <p>Mida täpsemalt sa oma soovi sõnastad, seda paremini saab AI sind aidata.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                2. Anna konteksti
+              </button>
+            </h2>
+            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#promptAccordion">
+              <div class="accordion-body">
+                <p><strong>Halb näide:</strong> "Kuidas kirjutada e-kirja?"</p>
+                <p><strong>Hea näide:</strong> "Pean kirjutama ametliku e‑kirja pangale, et paluda laenugraafikut muuta. Kuidas alustada ja millised punktid kaasata?"</p>
+                <p>Kontekst aitab AI-l mõista su olukorda ja anda asjakohasemat nõu.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                3. Määratle oma tase
+              </button>
+            </h2>
+            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#promptAccordion">
+              <div class="accordion-body">
+                <p><strong>Halb näide:</strong> "Seleta, kuidas arvuti töötab"</p>
+                <p><strong>Hea näide:</strong> "Seleta lihtsas keeles, nagu 10-aastasele lapsele, kuidas arvuti töötab. Ma ei tea tehnilistest asjadest midagi."</p>
+                <p>Ütle, kui sa oled algaja, keskmine või ekspert - vastus kohandatakse sellele.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading4">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                4. Küsi samm-sammult juhiseid
+              </button>
+            </h2>
+            <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#promptAccordion">
+              <div class="accordion-body">
+                <p><strong>Halb näide:</strong> "Kuidas luua Facebooki konto?"</p>
+                <p><strong>Hea näide:</strong> "Palun anna mulle samm-sammult juhised, kuidas luua Facebooki kontot. Lisa ka selgitused, mida iga väli tähendab."</p>
+                <p>Detailseid samme on eriti kasulik küsida tehniliste ülesannete puhul.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading5">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                5. Küsi näiteid
+              </button>
+            </h2>
+            <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#promptAccordion">
+              <div class="accordion-body">
+                <p><strong>Halb näide:</strong> "Mis on metafoor?"</p>
+                <p><strong>Hea näide:</strong> "Mis on metafoor? Palun too 3 näidet igapäevaelust ja selgita, miks need on metafoorid."</p>
+                <p>Näited muudavad abstraktsed mõisted arusaadavamaks.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading6">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                6. Määratle soovitud formaat
+              </button>
+            </h2>
+            <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#promptAccordion">
+              <div class="accordion-body">
+                <p><strong>Halb näide:</strong> "Räägi tervisliku toitumise põhitõdedest"</p>
+                <p><strong>Hea näide:</strong> "Tee loetelu 7 kõige olulisemast tervisliku toitumise põhimõttest. Iga punkti juurde lisa 1-2 lauset selgitust."</p>
+                <p>Ütle, kas soovid loendit, tabelit, teksti või midagi muud.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading7">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                7. Küsi võrdlusi
+              </button>
+            </h2>
+            <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#promptAccordion">
+              <div class="accordion-body">
+                <p><strong>Halb näide:</strong> "Mis on parem telefon?"</p>
+                <p><strong>Hea näide:</strong> "Võrdle Samsung Galaxy A54 ja iPhone 13 telefone. Mind huvitab eelkõige kaamera kvaliteet, aku kestvus ja hind. Minu eelarve on kuni 500 eurot."</p>
+                <p>Võrdlused aitavad teha paremaid otsuseid.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading8">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                8. Jaga ülesanne osadeks
+              </button>
+            </h2>
+            <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8" data-bs-parent="#promptAccordion">
+              <div class="accordion-body">
+                <p><strong>Halb näide:</strong> "Aita mul elada tervislikumalt"</p>
+                <p><strong>Hea näide:</strong> "Tahan alustada tervislikuma eluviisiga. Esiteks, milliseid väikseid muudatusi võiksin teha oma hommikusöögis järgmisel nädalal?"</p>
+                <p>Suured eesmärgid jaga väiksemateks, hallatavamateks sammudeks.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading9">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                9. Küsi selgitust, kui ei saa aru
+              </button>
+            </h2>
+            <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9" data-bs-parent="#promptAccordion">
+              <div class="accordion-body">
+                <p>Näide: "Sa mainisid 'metaandmeid' - võid seda lihtsamalt seletada? Anna näide, mida see tähendab fotode puhul."</p>
+                <p>Ära häbene küsida! AI on kannatlik ja seletab uuesti.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading10">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                10. Küsi alternatiive
+              </button>
+            </h2>
+            <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="heading10" data-bs-parent="#promptAccordion">
+              <div class="accordion-body">
+                <p><strong>Halb näide:</strong> "Kas see on hea idee?"</p>
+                <p><strong>Hea näide:</strong> "Plaanin osta elektriautot. Millised on plussid ja miinused võrreldes bensiiniautoga? Millised alternatiivid võiksid veel olla?"</p>
+                <p>Alternatiivid aitavad näha laiemat pilti.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 11 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading11">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                11. Kasuta rolli mängimist
+              </button>
+            </h2>
+            <div id="collapse11" class="accordion-collapse collapse" aria-labelledby="heading11" data-bs-parent="#promptAccordion">
+              <div class="accordion-body">
+                <p>Näide: "Kujuta ette, et sa oled patsiendi õde. Selgita mulle, kuidas mõõta vererõhku kodus ja mida tulemus tähendab."</p>
+                <p>Rollid aitavad AI-l vastata õigest perspektiivist.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 12 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading12">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                12. Küsi järelküsimusi
+              </button>
+            </h2>
+            <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="heading12" data-bs-parent="#promptAccordion">
+              <div class="accordion-body">
+                <p><strong>Esimene küsimus:</strong> "Kuidas alustada kodulehekülge?"</p>
+                <p><strong>Järelküsimus:</strong> "Sa mainisid WordPressi. Kas see on tasuta? Kui raske seda kasutada on?"</p>
+                <p>Ära karda jätkata vestlust ja süveneda teemasse.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 13 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading13">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
+                13. Palu kontrollida su arusaamist
+              </button>
+            </h2>
+            <div id="collapse13" class="accordion-collapse collapse" aria-labelledby="heading13" data-bs-parent="#promptAccordion">
+              <div class="accordion-body">
+                <p>Näide: "Ma sain aru, et Bitcoin on nagu digitaalne raha, mida ei kontrolli ükski pank. Kas see on õige? Mida ma veel teadma peaks?"</p>
+                <p>See aitab kinnitada, et sa said õigesti aru.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 14 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading14">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse14" aria-expanded="false" aria-controls="collapse14">
+                14. Määratle piirangud
+              </button>
+            </h2>
+            <div id="collapse14" class="accordion-collapse collapse" aria-labelledby="heading14" data-bs-parent="#promptAccordion">
+              <div class="accordion-body">
+                <p><strong>Halb näide:</strong> "Soovita reisikohta"</p>
+                <p><strong>Hea näide:</strong> "Soovita reisikohta Euroopas augustiks. Eelarve 1000 eurot, lendan Tallinnast, soovin sooja ilma ja kultuurielamusi, kuid väldin suuri turismikohti."</p>
+                <p>Piirangud aitavad leida just sulle sobiva lahenduse.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 15 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading15">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse15" aria-expanded="false" aria-controls="collapse15">
+                15. Palu praktilist abi
+              </button>
+            </h2>
+            <div id="collapse15" class="accordion-collapse collapse" aria-labelledby="heading15" data-bs-parent="#promptAccordion">
+              <div class="accordion-body">
+                <p><strong>Halb näide:</strong> "Kuidas säästmine töötab?"</p>
+                <p><strong>Hea näide:</strong> "Mu sissetulek on 1500 eurot kuus ja kulud 1200 eurot. Kuidas ma võiksin alustada säästmist? Tee mulle lihtne plaan esimeseks kuuks."</p>
+                <p><strong>Pea meeles:</strong> "Praktilised, rakendatavad soovitused on kõige kasulikumad."</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- End accordion block -->
 
       <hr>
 
@@ -76,6 +334,19 @@
     </div>
   </div>
 </main>
+
+<!-- Progress Indicator (similar to index.html) -->
+<div class="progress-indicator" aria-hidden="false">
+  <div class="text-center">
+    <div class="mb-2">
+      <strong>Sinu Progress</strong>
+    </div>
+    <div class="progress" style="width: 150px;">
+      <div id="lessonProgressBar" class="progress-bar bg-success" role="progressbar" style="width: 0%;">0%</div>
+    </div>
+    <small class="text-muted mt-1 d-block">Tundi 2/3</small>
+  </div>
+</div>
 
 <footer>
   <div class="container">
@@ -92,5 +363,38 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // Smooth scrolling for anchor links to in-page targets
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href.length > 1) {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+  });
+
+  // Progress bar update (updates width and text based on page scroll)
+  function updateProgress() {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = height > 0 ? Math.round((winScroll / height) * 100) : 0;
+    const bar = document.getElementById('lessonProgressBar');
+    if (bar) {
+      bar.style.width = scrolled + '%';
+      bar.textContent = scrolled + '%';
+    }
+  }
+
+  window.addEventListener('scroll', updateProgress);
+  window.addEventListener('load', updateProgress);
+  window.addEventListener('resize', updateProgress);
+</script>
+
 </body>
 </html>
